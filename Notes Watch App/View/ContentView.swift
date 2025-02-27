@@ -35,6 +35,8 @@ struct ContentView: View {
                         notes.append(note)
                         
                         // 4. Make the text field empty
+                        text = ""
+                        
                         // 5. Save the notes (function)
                     } label: {
                         Image(systemName: "plus.circle")
