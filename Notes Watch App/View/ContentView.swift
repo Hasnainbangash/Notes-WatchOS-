@@ -15,9 +15,20 @@ struct ContentView: View {
     
     // MARK: - FUNCTION
     
+    func getDocumentDirectory() -> URL {
+        let path = FileManager.default.urls(for: .documentDirectory, in: .systemDomainMask)
+        return path[0]
+    }
+    
     func save() {
         // The dump is debugging function that prints detailed information about a value
-        dump(notes)
+        // dump(notes)
+        
+        do {
+            
+        } catch {
+            print("Saving data has failed!")
+        }
     }
     
     // MARK: - Body
