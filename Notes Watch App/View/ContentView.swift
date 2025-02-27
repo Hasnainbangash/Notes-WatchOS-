@@ -25,6 +25,14 @@ struct ContentView: View {
         // dump(notes)
         
         do {
+            // 1. Convert the notes array to data using JSONEncoder
+            let data = try JSONEncoder().encode(notes)
+            
+            // 2. Create a new URL to save the file using the getDocumentDirectory
+            let url = getDocumentDirectory().appendingPathComponent("notes")
+            
+            // 3. Write the data to the given URL
+            try data.write(to: url)
             
         } catch {
             print("Saving data has failed!")
