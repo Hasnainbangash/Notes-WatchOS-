@@ -32,6 +32,8 @@ struct ContentView: View {
                         let note = Note(id: UUID(), text: text)
                         
                         // 3. Add the new note item to the notes array (append)
+                        notes.append(note)
+                        
                         // 4. Make the text field empty
                         // 5. Save the notes (function)
                     } label: {
