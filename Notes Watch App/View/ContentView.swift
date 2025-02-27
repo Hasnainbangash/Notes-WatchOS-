@@ -15,6 +15,11 @@ struct ContentView: View {
     
     // MARK: - FUNCTION
     
+    func save() {
+        // The dump is debugging function that prints detailed information about a value
+        dump(notes)
+    }
+    
     // MARK: - Body
     
     var body: some View {
@@ -38,6 +43,8 @@ struct ContentView: View {
                         text = ""
                         
                         // 5. Save the notes (function)
+                        save()
+                        
                     } label: {
                         Image(systemName: "plus.circle")
                             .font(.system(size: 42, weight: .semibold))
@@ -49,6 +56,8 @@ struct ContentView: View {
                 } //: HSTACK
                 
                 Spacer()
+                
+                Text("\(notes.count)")
             } //: VTSACK
             .navigationTitle("Notes")
         }
