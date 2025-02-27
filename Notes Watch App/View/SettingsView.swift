@@ -37,7 +37,7 @@ struct SettingsView: View {
                 self.value = newValue
                 self.update()
             }), in: 1...4, step: 1)
-                .accentColor(.accentColor)
+            .accentColor(.accentColor)
         } //: VSTACK
     }
 }
