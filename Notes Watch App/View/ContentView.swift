@@ -18,25 +18,27 @@ struct ContentView: View {
     // MARK: - Body
     
     var body: some View {
-        VStack {
-            HStack(alignment: .center, spacing: 6) {
-                TextField("Add New Note", text: $text)
+        NavigationStack {
+            VStack {
+                HStack(alignment: .center, spacing: 6) {
+                    TextField("Add New Note", text: $text)
+                    
+                    Button {
+                        // ACTION
+                    } label: {
+                        Image(systemName: "plus.circle")
+                            .font(.system(size: 42, weight: .semibold))
+                    }
+                    .fixedSize()
+                    .buttonStyle(PlainButtonStyle())
+                    .foregroundColor(.accentColor)
+                    // .buttonStyle(BorderedButtonStyle(tint: .accentColor))
+                } //: HSTACK
                 
-                Button {
-                    // ACTION
-                } label: {
-                    Image(systemName: "plus.circle")
-                        .font(.system(size: 42, weight: .semibold))
-                }
-                .fixedSize()
-                .buttonStyle(PlainButtonStyle())
-                .foregroundColor(.accentColor)
-                // .buttonStyle(BorderedButtonStyle(tint: .accentColor))
-            } //: HSTACK
-            
-            Spacer()
-        } //: VTSACK
-        .navigationTitle("Notes")
+                Spacer()
+            } //: VTSACK
+            .navigationTitle("Notes")
+        }
     }
 }
 
