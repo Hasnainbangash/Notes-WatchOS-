@@ -26,6 +26,8 @@ struct ContentView: View {
                     Button {
                         // ACTION
                         // 1. Only run the button's action when the text field is not empty
+                        guard text.isEmpty == false else { return }
+                        
                         // 2. Create a new note item and initialize it with the text value
                         // 3. Add the new note item to the notes array (append)
                         // 4. Make the text field empty
