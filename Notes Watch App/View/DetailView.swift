@@ -31,7 +31,20 @@ struct DetailView: View {
             .foregroundColor(.accentColor)
             
             // CONTENT
+            Spacer()
+            
+            ScrollView(.vertical) {
+                Text(note.text)
+                    .font(.title3)
+                    .fontWeight(.semibold)
+                    .multilineTextAlignment(.center)
+            }
+            
+            Spacer()
+            
             // FOOTER
+            
+            
         } //: VSTACK
         .padding(3)
     }
