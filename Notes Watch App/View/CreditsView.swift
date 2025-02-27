@@ -16,6 +16,8 @@ struct CreditsView: View {
         VStack(spacing: 3) {
             // PROFILE IMAGE
             // HEADER
+            HeaderView(title: "Credits")
+            
             // CONTENT
         } //: VSTACK
     }
