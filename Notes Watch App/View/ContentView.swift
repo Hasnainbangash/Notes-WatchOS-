@@ -16,7 +16,7 @@ struct ContentView: View {
     // MARK: - FUNCTION
     
     func getDocumentDirectory() -> URL {
-        let path = FileManager.default.urls(for: .documentDirectory, in: .systemDomainMask)
+        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return path[0]
     }
     
