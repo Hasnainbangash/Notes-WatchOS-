@@ -39,6 +39,16 @@ struct ContentView: View {
         }
     }
     
+    func load() {
+        do {
+            // 1. Get the notes URL path
+            // 2. Create a new property for the data
+            // 3. Decode the data
+        } catch {
+            // Do nothing
+        }
+    }
+    
     // MARK: - Body
     
     var body: some View {
