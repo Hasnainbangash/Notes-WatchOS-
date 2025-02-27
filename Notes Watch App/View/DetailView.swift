@@ -17,7 +17,23 @@ struct DetailView: View {
     // MARK: - BODY
     
     var body: some View {
-        Text("Hello, World!")
+        VStack(alignment: .center, spacing: 3) {
+            // HEADER
+            HStack {
+                Capsule()
+                    .frame(height: 1)
+                
+                Image(systemName: "note.text")
+                
+                Capsule()
+                    .frame(height: 1)
+            }
+            .foregroundColor(.accentColor)
+            
+            // CONTENT
+            // FOOTER
+        } //: VSTACK
+        .padding(3)
     }
 }
 
