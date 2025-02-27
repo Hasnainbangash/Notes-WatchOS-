@@ -33,6 +33,8 @@ struct ContentView: View {
                 .foregroundColor(.accentColor)
                 // .buttonStyle(BorderedButtonStyle(tint: .accentColor))
             } //: HSTACK
+            
+            Spacer()
         } //: VTSACK
         .navigationTitle("Notes")
     }
