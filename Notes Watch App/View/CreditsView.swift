@@ -13,7 +13,11 @@ struct CreditsView: View {
     // MARK: - BODY
     
     var body: some View {
-        Text("Hello, World!")
+        VStack(spacing: 3) {
+            // PROFILE IMAGE
+            // HEADER
+            // CONTENT
+        } //: VSTACK
     }
 }
 
