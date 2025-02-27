@@ -19,6 +19,14 @@ struct CreditsView: View {
             HeaderView(title: "Credits")
             
             // CONTENT
+            Text("Robert Petras")
+                .foregroundColor(.primary)
+                .fontWeight(.bold)
+            
+            Text("Developer")
+                .font(.footnote)
+                .foregroundColor(.secondary)
+                .fontWeight(.light)
         } //: VSTACK
     }
 }
