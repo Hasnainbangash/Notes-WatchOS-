@@ -27,6 +27,7 @@ struct ContentView: View {
                 } label: {
                     Image(systemName: "plus")
                 }
+                .fixedSize()
             } //: HSTACK
         } //: VTSACK
         .navigationTitle("Notes")
