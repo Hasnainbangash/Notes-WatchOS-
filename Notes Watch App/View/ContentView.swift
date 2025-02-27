@@ -40,12 +40,20 @@ struct ContentView: View {
     }
     
     func load() {
-        do {
-            // 1. Get the notes URL path
-            // 2. Create a new property for the data
-            // 3. Decode the data
-        } catch {
-            // Do nothing
+        DispatchQueue.main.async {
+            do {
+                // 1. Get the notes URL path
+                let url = getDocumentDirectory().appendingPathComponent("notes")
+                
+                // 2. Create a new property for the data
+                let data = try Data(contentsOf: url)
+                
+                // 3. Decode the data
+                notes = try JSONDecoder().decode([Note].self, from: data)
+                
+            } catch {
+                // Do nothing
+            }
         }
     }
     
