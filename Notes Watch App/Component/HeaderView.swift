@@ -18,7 +18,10 @@ struct HeaderView: View {
         VStack {
             // TITLE
             if title != "" {
-                
+                Text(title.uppercased())
+                    .font(.title3)
+                    .fontWeight(.bold)
+                    .foregroundColor(.accentColor)
             }
             
             // SEPERATOR
