@@ -29,6 +29,8 @@ struct ContentView: View {
                         guard text.isEmpty == false else { return }
                         
                         // 2. Create a new note item and initialize it with the text value
+                        let note = Note(id: UUID(), text: text)
+                        
                         // 3. Add the new note item to the notes array (append)
                         // 4. Make the text field empty
                         // 5. Save the notes (function)
