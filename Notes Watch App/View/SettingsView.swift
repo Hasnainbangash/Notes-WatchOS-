@@ -11,6 +11,7 @@ struct SettingsView: View {
     // MARK: - PROPERTIES
     
     @AppStorage("lineCount") var lineCount: Int = 1
+    @State private var value: Float = 1.0
     
     // MARK: - BODY
     
@@ -24,7 +25,8 @@ struct SettingsView: View {
                 .fontWeight(.bold)
             
             // SLIDER
-            
+            Slider(value: $value, in: 1...4, step: 1)
+                .accentColor(.accentColor)
             
         } //: VSTACK
     }
